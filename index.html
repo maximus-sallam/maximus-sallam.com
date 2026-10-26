@@ -240,6 +240,13 @@
     .zf-brand h3 { margin: 40px 0 16px; font-size: clamp(38px, 5vw, 68px); font-weight: 400; line-height: .95; letter-spacing: -.04em; }
     .zf-brand p { max-width: 430px; margin: 0; color: #bbb8af; font-size: 18px; }
     .zf-status { margin-top: 44px; display: flex; justify-content: space-between; gap: 15px; padding-top: 18px; border-top: 1px solid #393936; color:#aaa79f; }
+    .zf-cta { position: relative; z-index: 1; max-width: 600px; }
+    .zf-cta .meta { color: #aaa79f; }
+    .zf-cta h3 { margin: 14px 0 16px; font-size: clamp(30px, 3.6vw, 48px); font-weight: 400; line-height: 1; letter-spacing: -.03em; }
+    .zf-cta p { margin: 0; color: #c2bfb7; font-size: 19px; }
+    .zf-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+    .zf-outbound { padding: 6px clamp(24px, 7vw, 110px) clamp(90px, 12vw, 160px); }
+    .zf-outbound p { max-width: 720px; margin: 0; font-size: 21px; color: var(--muted); }
     .system-map { position: relative; overflow: hidden; display: grid; place-items: center; padding: clamp(30px, 6vw, 90px); }
     .system-map::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at center, rgba(230,59,46,.14), transparent 42%); }
     .diagram { width: min(690px, 100%); position: relative; z-index: 1; }
@@ -539,6 +546,7 @@
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
     <div class="nav-links" id="nav-links">
       <a href="#overview" data-route="overview">Overview</a>
+      <a href="#zebraflux" data-route="zebraflux">ZebraFlux</a>
       <a href="#systems" data-route="systems">Systems</a>
       <a href="#dorothy" data-route="dorothy">Dorothy</a>
       <a href="#work" data-route="work">Work</a>
@@ -568,6 +576,77 @@
     <section class="statement reveal" data-page="overview" aria-label="Introduction">
       <div class="section-no">00 / Position</div>
       <p>Production Linux, Android platform work, robotics and machine intelligence. <span>The common thread is systems that must operate under real constraints.</span></p>
+    </section>
+
+    <section class="zf-feature reveal" data-page="overview" aria-label="ZebraFlux, Inc. — my company">
+      <div class="zf-brand">
+        <div>
+          <img class="zf-mark" src="images/zebraflux-logo-official.png" alt="ZebraFlux brush-stroke Z logo">
+          <h3>ZebraFlux, Inc.</h3>
+          <p>The company I co-founded and lead technically — a veteran-owned AI research company in Michigan.</p>
+        </div>
+        <div class="zf-status meta"><span>CEO</span><span>Jonathan Nausley</span></div>
+        <div class="zf-status meta"><span>CTO</span><span>Maximus Sallam</span></div>
+      </div>
+      <div class="system-map">
+        <div class="zf-cta">
+          <div class="meta">Start here</div>
+          <h3>Real-time AI characters. Serious software engineering.</h3>
+          <p>ZebraFlux builds the AI Character Engine — real-time software for believable interactive characters with continuity — and delivers software engineering and cybersecurity for government and business. If you came to see what I am building, this is it.</p>
+          <div class="zf-actions">
+            <a class="button-link primary" href="https://zebraflux.com" target="_blank" rel="noopener">Visit zebraflux.com</a>
+            <a class="button-link" href="#zebraflux" data-route="zebraflux">About ZebraFlux</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zebraflux" data-page="zebraflux" aria-labelledby="zebraflux-title">
+      <header class="section-head reveal">
+        <div class="section-no">The company</div>
+        <div>
+          <h2 id="zebraflux-title">ZebraFlux, Inc.</h2>
+          <p class="lede">A veteran-owned AI research company based in Michigan. Research and production under one roof: the research program builds the ZebraFlux AI Character Engine, and the services practice applies the same engineering discipline to software and security work for government and business.</p>
+        </div>
+      </header>
+
+      <article class="zf-feature reveal">
+        <div class="zf-brand">
+          <div>
+            <img class="zf-mark" src="images/zebraflux-logo-official.png" alt="ZebraFlux brush-stroke Z logo">
+            <h3>ZebraFlux</h3>
+            <p>Real-time AI characters. Serious software engineering.</p>
+          </div>
+          <div class="zf-status meta"><span>Founded</span><span>2024 · Michigan</span></div>
+          <div class="zf-status meta"><span>CEO</span><span>Jonathan Nausley</span></div>
+          <div class="zf-status meta"><span>CTO</span><span>Maximus Sallam</span></div>
+        </div>
+        <div class="system-map">
+          <div class="zf-cta">
+            <div class="meta">The company site</div>
+            <h3>Everything ZebraFlux does lives at zebraflux.com.</h3>
+            <p>The product, the services, the research and how to work with us — the full picture is on the company site.</p>
+            <div class="zf-actions">
+              <a class="button-link primary" href="https://zebraflux.com" target="_blank" rel="noopener">Visit zebraflux.com</a>
+              <a class="button-link" href="#contact" data-route="contact">Contact me</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="research-ledger" aria-label="What ZebraFlux does">
+        <article class="research-row reveal"><div class="project-index">01 / Product</div><h3>ZebraFlux AI Character Engine</h3><p>Real-time software for believable interactive characters, built around a dual-budget architecture in which a fast, body-like evaluator and a slower reasoning system give characters continuity of state, consequence and memory. <a class="repo-link" href="#systems" data-route="systems">See the research</a></p></article>
+        <article class="research-row reveal"><div class="project-index">02 / Practice</div><h3>Software engineering</h3><p>Broad software engineering solutions for government and business — production systems built, tested and repaired, with the same discipline the research program runs on.</p></article>
+        <article class="research-row reveal"><div class="project-index">03 / Practice</div><h3>Cybersecurity</h3><p>Cybersecurity solutions for government and business, grounded in nine years of production infrastructure and incident-response work.</p></article>
+        <article class="research-row reveal"><div class="project-index">04 / My role</div><h3>Chief Technology Officer</h3><p>I co-founded ZebraFlux and lead its technical side: the Character Engine architecture, the research program that grew out of the Dorothy lineage, and the engineering practice. Jonathan Nausley leads the company as CEO. <a class="repo-link" href="#dorothy" data-route="dorothy">The Dorothy lineage</a></p></article>
+      </div>
+
+      <div class="zf-outbound reveal">
+        <p><strong>Looking for ZebraFlux?</strong> You want the company site — product, services, research and contact, all in one place.</p>
+        <div class="zf-actions">
+          <a class="button-link primary" href="https://zebraflux.com" target="_blank" rel="noopener">Go to zebraflux.com</a>
+        </div>
+      </div>
     </section>
 
     <section id="systems" data-page="systems" aria-labelledby="systems-title">
@@ -865,7 +944,7 @@
     </section>
   </main>
 
-  <footer><span>Maximus Sallam · 2026</span><span>Systems / Robotics / Machine Intelligence</span></footer>
+  <footer><span>Maximus Sallam · 2026</span><span><a href="#zebraflux" data-route="zebraflux">ZebraFlux, Inc.</a> · <a href="https://zebraflux.com" target="_blank" rel="noopener">zebraflux.com</a></span><span>Systems / Robotics / Machine Intelligence</span></footer>
 
   <script>
     (function () {
@@ -875,7 +954,7 @@
       var routeLinks = document.querySelectorAll('[data-route]');
       var pages = document.querySelectorAll('[data-page]');
       var reveals = document.querySelectorAll('.reveal');
-      var routes = ['overview', 'systems', 'dorothy', 'work', 'trajectory', 'profile', 'notary', 'contact'];
+      var routes = ['overview', 'zebraflux', 'systems', 'dorothy', 'work', 'trajectory', 'profile', 'notary', 'contact'];
       var currentRoute = '';
 
       function getRoute() {
